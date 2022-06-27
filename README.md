@@ -1,2 +1,2 @@
 # SendMail
-In project run testng.xml
+In project in gradle menu run Task -> verification -> test
