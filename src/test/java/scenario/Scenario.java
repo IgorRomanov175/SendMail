@@ -1,10 +1,12 @@
 package scenario;
 
 import browser.BrowserControler;
-import org.example.user.User;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import user.User;
 import org.openqa.selenium.WindowType;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+
 
 public class Scenario extends BrowserControler {
 
@@ -30,6 +32,6 @@ public class Scenario extends BrowserControler {
                 .inputMailAddress(TEST_USER_2.getMail())
                 .inputPassword(TEST_USER_2.getPassword());
 
-        Assert.assertTrue(getGoogleMail().getIncomingMail().isDisplayed());
+        Assertions.assertTrue(getGoogleMail().getIncomingMail().isDisplayed());
     }
 }

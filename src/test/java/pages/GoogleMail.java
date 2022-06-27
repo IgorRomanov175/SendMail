@@ -1,4 +1,4 @@
-package org.example.pages;
+package pages;
 
 
 import lombok.Getter;
@@ -28,7 +28,7 @@ public class GoogleMail extends BasePage {
     @FindBy(xpath = "//div[@class='Am Al editable LW-avf tS-tW']")
     private WebElement textMailFieldInput;
 
-    @FindBy(xpath = "//div[text()='Надіслати']")
+    @FindBy(xpath = "//div[@class='T-I J-J5-Ji aoO v7 T-I-atl L3']")
     private WebElement sendMailButton;
 
     @FindBy(xpath = "//div[@class='BHzsHc']")

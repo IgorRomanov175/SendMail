@@ -1,26 +1,27 @@
 package browser;
 
-import org.example.pages.GoogleMail;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import pages.GoogleMail;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
 public class BrowserControler {
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
-    @BeforeMethod
-    public void setUp() {
+    @BeforeAll
+    static void setUp() {
         chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
 
-    @AfterMethod
-    public void tearDown() {
+    @AfterAll
+    static void tearDown() {
         driver.quit();
     }
 
